@@ -31,7 +31,7 @@ input[type=submit],label,select,.pointer { cursor:pointer; }
 	font-size:16px;
 }
 
-#share-button {
+#sharebtn {
 	display:block;
 	float:right;
 	margin-right:50px;
