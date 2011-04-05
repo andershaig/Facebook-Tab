@@ -1,20 +1,95 @@
 <div id="wrapper">
-	<div id="header">
-		<div id="for-all">
-			Non-fans can view this.
-		</div>
-	</div><!-- end #header -->
-	
 	<div id="share">
-		Share this page.
+		<div id="sharebtn">
+			<fb:share-button href="http://facebook.com/creamfieldsaustralia"></fb:share-button>
+		</div>
 	</div>
-	<div id="logo">
-		Logo
+	<div id="main">
+		<a href="http://www.youtube.com/watch?v=cPErRH5IkBk" rel="prettyPhoto" id="youtube"><img src="img/play.png" alt="YouTube" /></a>
+		
+		<div id="info_box">
+			<h3>Check Artists</h3>
+			<a href="http://creamfields.com.au/artists/">http://creamfields.com.au/artists/ &raquo;</a>
+		
+			<h3>Get Tickets</h3>
+			<a href="http://creamfields.com.au/tickets-dates/">http://creamfields.com.au/tickets-dates/ &raquo;</a>
+			
+			<h3>Get Social</h3>
+			<a href="http://creamfields.com.au/social/">http://creamfields.com.au/social/ &raquo;</a>
+			
+			<h3>Creamfields Photos (2010)</h3>
+			<a href="http://creamfields.com.au/photos/2010/">http://creamfields.com.au/photos/2010/ &raquo;</a>
+		</div>
 	</div>
-	<div id="content">
-		Content Section
-	</div>
-	<div id="bottom">
-		Bottom or Footer Section
-	</div>
+	<div id="feeds">
+	<script src="http://widgets.twimg.com/j/2/widget.js"></script>	
+		<div id="left_twitter">	
+		<script>
+		new TWTR.Widget({
+		  version: 2,
+		  type: 'profile',
+		  rpp: 5,
+		  interval: 6000,
+		  width: 250,
+		  height: 300,
+		  theme: {
+		    shell: {
+		      background: '#333333',
+		      color: '#ffffff'
+		    },
+		    tweets: {
+		      background: '#ffffff',
+		      color: '#858585',
+		      links: '#757575'
+		    }
+		  },
+		  features: {
+		    scrollbar: true,
+		    loop: false,
+		    live: true,
+		    hashtags: true,
+		    timestamp: true,
+		    avatars: false,
+		    behavior: 'all'
+		  }
+		}).render().setUser('creamfieldsoz').start();
+		</script>
+		</div><!-- end #left_twitter -->
+		
+		<div id="right_twitter">
+		<script>
+		new TWTR.Widget({
+		  version: 2,
+		  type: 'list',
+		  rpp: 30,
+		  interval: 6000,
+		  title: 'Creamfields Artists',
+		  subject: 'www.creamfields.com.au',
+		  width: 250,
+		  height: 300,
+		  theme: {
+		    shell: {
+		      background: '#2c1ab8',
+		      color: '#ffffff'
+		    },
+		    tweets: {
+		      background: '#ffffff',
+		      color: '#444444',
+		      links: '#b740c2'
+		    }
+		  },
+		  features: {
+		    scrollbar: true,
+		    loop: false,
+		    live: true,
+		    hashtags: true,
+		    timestamp: true,
+		    avatars: true,
+		    behavior: 'all'
+		  }
+		}).render().setList('johncurtin', 'creamfieldsaustralia').start();
+		</script>
+		</div><!-- end #right_twitter -->
+	<div class="clear"></div>
+	</div><!-- end #feeds -->
 </div><!-- end #wrapper -->
