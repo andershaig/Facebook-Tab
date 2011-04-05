@@ -34,7 +34,9 @@ input[type=submit],label,select,.pointer { cursor:pointer; }
 #sharebtn {
 	display:block;
 	float:right;
-	margin-right:50px;
+	margin-right:110px;
+	margin-top:8px;
+	line-height:16px;
 
 	font-family:arial,helvetica,sans-serif; font-size:12px;
 	border:1px solid #999;
