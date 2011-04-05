@@ -19,6 +19,7 @@
 <script>
 FB.init({ apiKey: "<%= APP_CONFIG['api_key'] %>", cookie: false, xfbml: true });
   FB.Canvas.setAutoResize();
+  FB.XFBML.parse();
 </script>
 
 <%= yield %>
