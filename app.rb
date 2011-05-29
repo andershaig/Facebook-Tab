@@ -1,20 +1,19 @@
 require 'rubygems'
 require 'sinatra'
-require 'httparty'
-require 'ruby-debug'
-require 'base64'
-require 'openssl'
-require 'crack/json'
 
 enable :sessions
 
-APP_CONFIG = YAML.load_file("config.yml")
-
-post '/' do
-  erb :index
+helpers do
+  def iframe(url)
+    "<iframe id='preview' src='#{url}' frameborder=0 scrolling=no width='520px' height='auto' style='height:800px;'></iframe>"
+  end
 end
 
-# Display Tab on Post
-post '/tab' do
-  erb :tab
+get '/' do
+	erb :index
+end
+
+get '/*' do
+	@preview_url = params[:splat]
+	erb :preview, :layout => false
 end

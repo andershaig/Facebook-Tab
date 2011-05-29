@@ -1,10 +1,11 @@
-// Lightbox
-
-$(document).ready(function(){
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		show_title: false,
-		theme: "facebook",
-		default_width: 480
+// iFrame Height
+$(document).ready(function() {
+	$('#larger').click(function() {
+	    $('#preview').animate({"height": "+=100px"}, 500);
+	});
+	
+	$('#smaller').click(function() {
+	    $('#preview').animate({"height": "-=100px"}, 500);
 	});
 });
 

@@ -2,28 +2,18 @@
 <html lang="en-EN">
 <head>
 <meta charset="UTF-8" />
-<title><%= @title || 'iFrame Skeleton' %></title>
+<title><%= @title || 'Fan Page Preview' %></title>
     <link rel="stylesheet" type="text/css" media="all" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/css/style.css?v=2.0" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/prettyPhoto.css" />
     
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
-	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
-	<script src="js/cssua.min.js" type="text/javascript"></script>
-	<script src="js/global.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/cssua.min.js"></script>
+	<script type="text/javascript" src="/js/global.js"></script>
 </head>
 
 <body>
-<div id="fb-root"></div>
-<script src="http://connect.facebook.net/en_US/all.js"></script>
-<script>
-FB.init({ apiKey: "<%= APP_CONFIG['api_key'] %>", cookie: false, xfbml: true });
-  FB.Canvas.setAutoResize();
-  FB.XFBML.parse();
-</script>
 
 <%= yield %>
 
-<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 </body>
 </html>
